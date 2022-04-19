@@ -9,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
@@ -18,4 +19,28 @@ code {
 
 .container{
   max-width: 1440px;
+}
+
+@media screen and (min-width:700px) {
+  .App{
+    background-image: url("C:\Users\HP\Desktop\lilfive\src\assets\images\LIL5IVE.png"),url("C:\Users\HP\Desktop\lilfive\src\assets\images\man.png"),url("C:\Users\HP\Desktop\lilfive\src\assets\images\ziggy.png");
+    background-repeat:no-repeat no-repeat,no-repeat;
+    background-position: center,right, right;
+    background-color: black;
+    background-size: 80%,40%,50%;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .App{
+    background-image: url("C:\Users\HP\Desktop\lilfive\src\assets\images\LIL5IVE.png"),url("C:\Users\HP\Desktop\lilfive\src\assets\images\man.png"),url("C:\Users\HP\Desktop\lilfive\src\assets\images\ziggy.png");
+    background-repeat:no-repeat no-repeat,no-repeat;
+    background-position: center,center, center;
+    background-color: black;
+    background-size: 80%,cover,100%;
+  }
+}
+
+.sideNav{
+  background-color:  rgba(37, 37, 37, 0.9);
 }
