@@ -5,7 +5,6 @@ import Facebook from '../../assets/images/facebook.svg';
 import Instagram from '../../assets/images/instagram.svg';
 import Play from '../../assets/images/play.svg';
 import Hamburger from '../../assets/images/hamburger.svg';
-import './Nav.css';
 
 const Navigations = [ 'artist', 'services', 'discography', 'about', 'contact' ];
 const handles = [ Twitter, Facebook, Instagram, Play ];
