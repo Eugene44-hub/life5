@@ -10,8 +10,8 @@ function App() {
 
    <div className='text-white  top-[50%] text-center left-[30%] translate-y-[-50%]  translate-x-[-30%] fixed'>
     <div className="m-auto">
-    <img src={NewLife} />
-    <img src={Platform} className="w-[50%]"/>
+    <img src={NewLife} className="my-2"/>
+    <img  src={Platform} className="w-[70%] my-2"/>
     <img src={Happy} />
 
     </div>
