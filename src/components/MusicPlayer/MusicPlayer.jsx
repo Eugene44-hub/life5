@@ -7,9 +7,12 @@ function MusicPlayer() {
     const AudioRef=useRef()
     const [playing,setPlaying]=useState(false)
 const [duration,setDuration]=useState(0)
- const onChange={
-
- }
+const rangeRef=useRef()
+console.log(duration.toFixed())
+const onChange=(e)=>{
+ AudioRef.current.currentTime= (AudioRef.current.duration/100)*e.target.value
+    console.log(e.target.value)
+}
 useEffect(()=>{
 
     if(playing){
@@ -22,10 +25,10 @@ useEffect(()=>{
 
   return (
     <div className=''>
-    <audio ref={AudioRef} onLoadedData={(e)=>{console.log(e.target.duration.toFixed())}}  onTimeUpdate={(e)=>{setDuration((e.target.currentTime/e.target.duration)*100)}} src={song}></audio>
+    <audio ref={AudioRef}  onLoadedData={(e)=>{console.log(e.target.duration.toFixed())}}  onTimeUpdate={(e)=>{setDuration((e.target.currentTime/e.target.duration)*100)}} src={song}></audio>
     <button onClick={()=>setPlaying(!playing)} className={`${playing?"bg-red-500":""} border-2 border-white h-[50px] w-[50px] rounded-full`}><img src={MusicPlay} className="w-[20px] m-auto"/></button>
  <div className='mt-[10px]'> 
-    <input type="range" value={duration} onChange={(e)=>console.log(e.target.value)} />
+    <input ref={rangeRef} type="range" value={duration} className="slider" onChange={onChange}/>
 </div>
     </div>
   )
